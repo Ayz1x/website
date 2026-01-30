@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: pink;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 220px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #no {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="her-photo.jpg" alt="Us 💕">
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <button onclick="yes()">Yes 💘</button>
+  <button id="no" onmouseover="moveNo()">No 💔</button>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      noBtn.style.left = Math.random() * 80 + "vw";
+      noBtn.style.top = Math.random() * 80 + "vh";
+    }
+
+    function yes() {
+      document.body.innerHTML = `
+        <h1>YAYYY 💞</h1>
+        <p>You just made me the happiest person 😌</p>
+        <img src="second-photo.jpg" width="250">
+      `;
+    }
+  </script>
+
+</body>
+</html>
